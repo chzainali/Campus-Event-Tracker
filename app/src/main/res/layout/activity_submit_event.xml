@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.SubmitEventActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/app_gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/baseline_arrow_back_24"
+        app:title=" Submit Event"
+        app:titleTextAppearance="@style/TextAppearance.Material3.BodyLarge"
+        app:titleTextColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/celebration"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/baseline_cloud_upload_24" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/logo"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="Event Image"
+                android:textColor="@color/dark_color"
+                android:textStyle="normal" />
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/desc"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_field"
+                android:hint="Event Name"
+                android:inputType="text"
+                android:padding="14dp"
+                android:paddingStart="15dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_color"
+                android:textColorHint="@color/dark_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_field"
+                android:clickable="true"
+                android:drawableTint="@color/dark_color"
+                android:focusable="false"
+                android:hint="Set Date"
+                android:inputType="date"
+                android:padding="14dp"
+                android:paddingStart="15dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_color"
+                android:textColorHint="@color/dark_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_field"
+
+                android:drawableTint="@color/dark_color"
+                android:hint="Location"
+                android:inputType="text"
+                android:padding="14dp"
+                android:paddingStart="15dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_color"
+                android:textColorHint="@color/dark_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_field"
+                android:focusable="false"
+                android:hint="Categories"
+                android:padding="14dp"
+                android:paddingStart="15dp"
+                android:singleLine="true"
+                android:textColor="@color/dark_color"
+                android:textColorHint="@color/dark_color"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/type"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_field"
+                android:gravity="top"
+                android:hint="Enter Details"
+                android:inputType="textCapSentences"
+                android:padding="14dp"
+                android:paddingStart="15dp"
+                android:textColor="@color/dark_color"
+                android:textColorHint="@color/dark_color"
+                android:textSize="16sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/register"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/details"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/bg_buttons"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

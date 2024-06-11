@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CampusEventTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:actionOverflowButtonStyle">@style/OverflowMenuButtonStyle</item>
+        <item name="android:statusBarColor">@color/app_color</item>
+    </style>
+
+    <style name="Theme.CampusEventTracker" parent="Base.Theme.CampusEventTracker" />
+
+    <style name="OverflowMenuButtonStyle" parent="Widget.AppCompat.ActionButton.Overflow">
+        <!-- Change the color of the overflow menu button -->
+        <item name="android:tint">@android:color/white</item>
+    </style>
+</resources>
